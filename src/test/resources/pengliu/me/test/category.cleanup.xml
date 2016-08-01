@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <!-- 空的节点，代表清空对应表中所有数据 -->
+    <category />
+</dataset>

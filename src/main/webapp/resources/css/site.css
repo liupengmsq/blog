@@ -1,0 +1,802 @@
+html {
+    background: url("images/webBg.gif") repeat-x left top rgb(255, 255, 255); font: 12px/18px Verdana, "Lucida Grande", Geneva, Arial, sans-serif; margin: 0px; padding: 0px; text-align: center; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+body {
+    background: url("images/webBg.gif") repeat-x left top rgb(255, 255, 255); font: 12px/18px Verdana, "Lucida Grande", Geneva, Arial, sans-serif; margin: 0px; padding: 0px; text-align: center; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: rgb(102, 153, 204);
+}
+a:visited {
+    color: rgb(102, 153, 204);
+}
+a:hover {
+    color: rgb(255, 51, 102);
+}
+.floatLeft {
+    float: left;
+}
+.floatRight {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.center {
+    text-align: center;
+}
+.message {
+    color: red;
+}
+.error {
+    color: red;
+}
+#messageBox {
+    padding: 5px; border: 1px solid black; border-image: none; left: 0px; width: 100px; text-align: center; bottom: 0px; color: red; font-weight: bold; display: none; position: fixed; background-color: rgb(255, 253, 208);
+}
+#invisiblePlaceHoler {
+    height: 1px; font-size: 96px; visibility: hidden;
+}
+div#container {
+    margin: 0px auto; padding: 0px 10px; width: auto; text-align: left; min-width: 960px; max-width: 1600px;
+}
+div#wrapper {
+    margin: 15px 0px; width: 100%; overflow: auto;
+}
+div#content {
+    margin-right: 465px; float: left; width: 60%;
+}
+/*@media screen and (min-width: 1280px) {*/
+    /*div#content {*/
+        /*margin-right: 465px; float: left; width: 60%;*/
+    /*}*/
+/*}*/
+div#sidebar {
+    width: 455px; margin-left: -455px; float: left;
+}
+div#header ul {
+    list-style: none; margin: 0px; padding: 0px;
+}
+ul#topMnu {
+    list-style: none; margin: 0px; padding: 0px;
+}
+a.minyx {
+    width: 130px; height: 23px; text-indent: -9000em; float: left; display: block; background-image: url("images/minyx_lite.gif"); background-repeat: no-repeat;}
+div#header h1 small {
+    margin: 10px 0px 0px; color: rgb(102, 102, 102); text-transform: uppercase; letter-spacing: -1px; font-size: 12px; display: block;
+}
+ul#menu {
+    line-height: 20px; float: right;
+}
+ul#menu li {
+    background-position: 0px 1px; margin: 0px; padding: 28px 0px; font-size: 11px; float: left; display: inline; background-image: url("images/mnuSep.gif"); background-repeat: no-repeat;
+}
+ul#menu li a {
+    padding: 30px 15px; text-transform: uppercase; font-weight: bold;
+}
+ul#menu li a:link {
+    color: rgb(49, 54, 62);
+}
+ul#menu li a:visited {
+    color: rgb(49, 54, 62);
+}
+ul#menu li a:hover {
+    color: rgb(255, 102, 51);
+}
+a.minyx:link {
+    background-position: 0px 0px;
+}
+a.minyx:visited {
+    background-position: 0px 0px;
+}
+a.minyx:hover {
+    background-position: 0px -23px;
+}
+ul#topMnu {
+    padding: 3px; text-align: right; font-size: 10px;
+}
+ul#topMnu li {
+    padding: 0px 10px; color: rgb(255, 255, 255); border-right-color: rgb(99, 104, 112); border-right-width: 1px; border-right-style: solid; display: inline;
+}
+ul#topMnu li a:link {
+    color: rgb(255, 255, 255); font-weight: bold;
+}
+ul#topMnu li a:visited {
+    color: rgb(255, 255, 255); font-weight: bold;
+}
+ul#topMnu li a:hover {
+    color: rgb(112, 128, 51); font-weight: bold;
+}
+ul#topMnu li#login {
+    color: rgb(255, 255, 255); font-weight: bold;
+}
+div#header {
+    height: 90px;
+    text-align: left;
+}
+div#header h1 {
+    margin: 0px; padding: 20px 0px 10px 10px; letter-spacing: -2px; font-size: 36px; font-weight: normal;
+}
+div#header h1 a:link {
+    color: rgb(75, 86, 152);
+}
+div#header h1 a:visited {
+    color: rgb(75, 86, 152);
+}
+div#header h1 a:hover {
+    color: rgb(255, 51, 102);
+}
+ul#menu li.current a {
+    background-position: top; background-image: url("images/mnuIndicator.gif"); background-repeat: no-repeat;
+}
+ul#menu li.current a:link {
+    color: rgb(86, 94, 57); text-decoration: underline;
+}
+ul#menu li.current a:visited {
+    color: rgb(86, 94, 57); text-decoration: underline;
+}
+ul#menu li.current a:hover {
+    color: rgb(255, 51, 102);
+}
+ul#menu li ul {
+    display: none;
+}
+ul#menu li#rss {
+    margin: 0px; padding: 0px 0px 0px 30px; width: 64px; height: 42px; text-indent: -9000em; display: block;
+}
+ul#menu li#rss a {
+    margin: 35px 0px 0px; padding: 0px; width: 64px; height: 42px; display: block; position: relative; background-image: url("images/itemFeed.gif"); background-repeat: no-repeat;
+}
+ul#menu li#rss a:link {
+    background-position: right bottom;
+}
+ul#menu li#rss a:visited {
+    background-position: right bottom;
+}
+ul#menu li#rss a:hover {
+    background-position: right top;
+}
+div.post {
+    margin-bottom: 30px;
+}
+div.post h2 {
+    background-position: left bottom; margin: 0px; padding: 6px 0px; letter-spacing: -1px; font-size: 18px; font-weight: normal; background-image: url("images/dotsH.gif"); background-repeat: repeat-x;
+}
+div.post small {
+    text-align: right; color: rgb(171, 171, 171); letter-spacing: normal; font-size: 12px; display: block;
+}
+div.post small a:link {
+    color: rgb(171, 171, 171);
+}
+div.post small a:active {
+    color: rgb(171, 171, 171);
+}
+div.post small a:visited {
+    color: rgb(171, 171, 171);
+}
+div.post small a:hover {
+    color: rgb(51, 102, 153); text-decoration: underline;
+}
+div.post div.entry h1 {
+    font-size: 26px; font-weight: normal;
+}
+div.post div.entry h2 {
+    font-size: 22px; font-weight: normal; background-image: none;
+}
+div.post div.entry h3 {
+    font-size: 18px; font-weight: normal;
+}
+div.post div.entry h4 {
+    font-size: 16px; font-weight: normal;
+}
+div.post div.entry h5 {
+    font-size: 14px; font-weight: normal;
+}
+div.post div.entry h6 {
+    font-size: 12px; font-weight: normal;
+}
+div.post div.entry p code {
+    color: maroon; font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New";
+}
+div.post div.entry {
+    font: 14px/180% Georgia, "Times New Roman", Times, san-serif; font-size-adjust: none; font-stretch: normal;
+}
+div.post div.entry p {
+    margin: 12px auto; line-height: 180%;
+}
+div.post div.entry a:link img {
+    border-color: rgb(221, 221, 221); vertical-align: middle; background-color: rgb(255, 255, 255);
+}
+div.post div.entry a:visited img {
+    border-color: rgb(221, 221, 221); vertical-align: middle; background-color: rgb(255, 255, 255);
+}
+div.post div.entry a:hover img {
+    border-color: rgb(102, 153, 204); background-color: rgb(245, 245, 245);
+}
+div.post div.entry ul {
+    list-style: none; margin: 10px; padding: 0px;
+}
+div.post div.entry ul li {
+    background-position: 0px 9px; padding: 0px 0px 0px 15px; background-image: url("images/icon_miniarrow.gif"); background-repeat: no-repeat;
+}
+div.post div.entry ol {
+
+}
+div.post div.entry ol li {
+    padding: 0px;
+}
+div.post div.entry p a {
+    border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.desc_link {
+    border-bottom-width: 1px; border-bottom-style: dashed;
+}
+div.post div.entry a:link {
+    color: rgb(61, 129, 238);
+}
+div.post div.entry a:visited {
+    color: rgb(61, 129, 238);
+}
+div.post div.entry a:hover {
+    color: rgb(255, 51, 0);
+}
+div.post ul.postmetadata {
+    margin: 10px auto; padding: 4px 0px; font-size: 12px; border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 3px; border-bottom-width: 3px; border-top-style: double; border-bottom-style: double; list-style-type: none;
+}
+div.post div.entry blockquote {
+    background: url("images/bq.gif") no-repeat left top rgb(255, 255, 255); margin: 0px auto; padding: 0px 0px 0px 45px; width: 90%; color: rgb(102, 102, 102); font-size: 13px;
+}
+div.post div.entry blockquote p {
+    margin: 8px auto;
+}
+div.post div.entry blockquote blockquote {
+    padding: 0px 0px 0px 20px; margin-left: 20px; border-left-color: rgb(221, 221, 221); border-left-width: 5px; border-left-style: solid; background-image: none;
+}
+div.post ul.postmetadata li {
+    /*background-position: 0px -170px; */
+    padding: 2px 0px 5px 20px;
+    background-repeat: no-repeat;
+}
+div.post ul.postmetadata li.icon_cat {
+    background-image: url("images/icon_folder.gif");
+}
+div.post ul.postmetadata li.icon_date {
+    background-image: url("images/icon_date.gif");
+}
+div.post ul.postmetadata li.icon_track {
+    background-image: url("images/icon_track.gif");
+}
+div.post ul.postmetadata li.icon_bullet {
+    background-image: url("images/icon_bullet.gif");
+}
+div.post ul.postmetadata li.icon_rss {
+    background-image: url("images/icon_rss.gif");
+}
+div.post ul.postmetadata li.icon_alert {
+    background-image: url("images/icon_alert.gif");
+}
+div.post ul.postmetadata li.icon_r {
+    padding: 0px 0px 0px 20px; font-weight: bold; float: right;
+}
+div.post ul.postmetadata li a:link {
+    color: rgb(0, 162, 0);
+}
+div.post ul.postmetadata li a:visited {
+    color: rgb(0, 162, 0);
+}
+div.post ul.postmetadata li a:hover {
+    color: rgb(51, 51, 51);
+}
+.navigation {
+    margin: 0px; width: 100%; overflow: auto; border-top-color: rgb(239, 239, 239); border-top-width: 3px; border-top-style: solid;
+}
+.navigation a {
+    padding: 10px; text-align: center; text-transform: lowercase; font-size: 11px; display: block;
+}
+.alignleft {
+    width: 50%; float: left;
+}
+.alignright {
+    width: 50%; float: right;
+}
+.navigation .alignright a {
+    font-size: 12px; font-weight: bold; background-image: url("images/icon_right.gif"); background-repeat: no-repeat;
+}
+.navigation .alignleft a {
+    font-size: 12px; font-weight: bold; background-image: url("images/icon_left.gif"); background-repeat: no-repeat;
+}
+.navigation .alignright a:link {
+    background-position: 95% 5px;
+}
+.navigation .alignright a:visited {
+    background-position: 95% 5px;
+}
+.navigation .alignleft a:link {
+    background-position: 10px 5px;
+}
+.navigation .alignleft a:visited {
+    background-position: 10px 5px;
+}
+.navigation .alignright a:hover {
+    background-position: 95% -20px;
+}
+.navigation .alignleft a:hover {
+    background-position: 10px -20px;
+}
+h3#commentCount {
+    background-position: left; margin: 15px 0px 0px; padding: 0px 0px 0px 25px; color: rgb(85, 85, 85); letter-spacing: -1px; font-size: 14px; font-weight: normal; background-repeat: no-repeat;
+}
+h3#respond {
+    background-position: left; margin: 15px 0px 0px; padding: 0px 0px 0px 25px; color: rgb(85, 85, 85); letter-spacing: -1px; font-size: 14px; font-weight: normal; background-repeat: no-repeat;
+}
+h3#commentCount {
+    float: left; background-image: url("images/icon_comments.gif");
+}
+h3#respond {
+    background-image: url("images/icon_addcomment.gif");
+}
+#comment_tip1 {
+    padding: 0px 0px 0px 25px; letter-spacing: -1px; background-image: url("images/icon_addcomment.gif"); background-repeat: no-repeat;
+}
+.addcomment {
+    margin: 12px 0px 0px; padding: 3px 18px 3px 0px; text-transform: uppercase; font-size: 10px; text-decoration: underline; float: right;
+}
+.closecomment {
+    margin: 12px 0px 0px; padding: 3px 18px 3px 0px; text-transform: uppercase; font-size: 10px; text-decoration: underline; float: right;
+}
+a.addcomment {
+    background-image: url("images/icon_arrowdown.gif"); background-repeat: no-repeat;
+}
+a.addcomment:link {
+    background-position: 100% 0px;
+}
+a.addcomment:visited {
+    background-position: 100% 0px;
+}
+a.addcomment:hover {
+    background-position: 100% -20px;
+}
+ol.commentList {
+    list-style: none; margin-top: 15px;
+}
+ol.commentList li.hidden {
+    opacity: 0.3;
+}
+ol.commentList li.commentItem {
+    padding: 12px 0px; margin-left: -40px; border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid; display: list-item;
+}
+ol.commentList li.commentItem a.commentControl {
+    margin-left: 5px; float: right;
+}
+ol.commentList li.commentItem div.userInfo {
+    width: 52px; text-align: center; overflow: visible; float: left;
+}
+ol.commentList li.commentItem div.userInfo span.ipaddress {
+    color: rgb(0, 151, 44); font-family: Verdana,Geneva,sans-serif; font-size: 8px;
+}
+ol.commentList li.commentItem div.userInfo span.admin {
+    color: red; font-family: Verdana,Geneva,sans-serif; font-size: 10px;
+}
+ol.commentList li.commentItem a.avatar img {
+    padding: 1px; border: 1px solid rgb(206, 206, 206); border-image: none; width: 50px; height: 50px; overflow: hidden; text-decoration: none; float: left;
+}
+ol.commentList li.commentItem h4 {
+    margin: 0px 0px 0px 65px; font-family: Verdana; font-size: 14px;
+}
+ol.commentList li.commentItem h4 a {
+    color: rgb(0, 151, 44);
+}
+ol.commentList li.commentItem h4 span.time {
+    color: rgb(153, 153, 153); font-family: Verdana,Geneva,sans-serif; font-size: 11px; font-weight: normal; margin-left: 5px;
+}
+ol.commentList li.commentItem div.commentContent {
+    line-height: 150%; font-size: 10pt; margin-left: 65px;
+}
+ol.commentList li.commentItem div.commentContent h1 {
+    font-size: 16pt;
+}
+ol.commentList li.commentItem div.commentContent h2 {
+    font-size: 14pt;
+}
+ol.commentList li.commentItem div.commentContent h3 {
+    font-size: 12pt;
+}
+ol.commentList li.commentItem div.commentContent p code {
+    color: maroon; font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", "����";
+}
+ol.commentList li.commentItem div.commentContent img {
+    border: 0px currentColor; border-image: none;
+}
+ol.commentList li.commentItem div.commentContent pre.code {
+    line-height: 110%; font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", "����"; white-space: pre-wrap; -ms-word-wrap: break-word;
+}
+ol.commentList li.commentItem div.commentContent blockquote {
+    border-width: 0px 0px 0px 3px; border-style: solid; border-color: rgb(221, 221, 221); padding: 1px 10pt; background-image: none; background-color: rgb(248, 248, 238);
+}
+ol.commentList li.commentItem div.commentContent * {
+    margin: 10pt 0px;
+}
+ol.commentList li.commentItem div.commentContent li {
+    margin: 0px;
+}
+ol.commentList li.commentItem div.commentContent blockquote li {
+    margin: 0px;
+}
+ol.commentList li.commentItem div.commentContent blockquote * {
+    margin: 8pt 0px;
+}
+ol.commentList li.commentItem div.commentContent blockquote blockquote {
+
+}
+ol.commentList li.commentItem div.commentContent ol ol {
+    margin: 0px 0px 0px -15pt;
+}
+ol.commentList li.commentItem div.commentContent ol ul {
+    margin: 0px 0px 0px -15pt;
+}
+ol.commentList li.commentItem div.commentContent ul ul {
+    margin: 0px 0px 0px -15pt;
+}
+ol.commentList li.commentItem div.commentContent ul ol {
+    margin: 0px 0px 0px -15pt;
+}
+form.commentform {
+    font-size: 10pt;
+}
+form.commentform div#captcha {
+    margin-bottom: 10pt;
+}
+form.commentform label.error {
+    padding-left: 5px; font-size: 10pt;
+}
+form.commentform p {
+    margin: 5px 0px;
+}
+form.commentform p.content {
+    margin-top: 10px;
+}
+form.commentform input.author {
+    padding: 4px 4px 4px 30px; border: 1px solid rgb(204, 204, 204); border-image: none; width: 230px; background-image: url("images/icon_form.gif"); background-repeat: no-repeat;
+}
+form.commentform input.email {
+    padding: 4px 4px 4px 30px; border: 1px solid rgb(204, 204, 204); border-image: none; width: 230px; background-image: url("images/icon_form.gif"); background-repeat: no-repeat;
+}
+form.commentform input.website {
+    padding: 4px 4px 4px 30px; border: 1px solid rgb(204, 204, 204); border-image: none; width: 230px; background-image: url("images/icon_form.gif"); background-repeat: no-repeat;
+}
+form.commentform input.rememberMe {
+    border: 1px solid rgb(204, 204, 204); border-image: none; width: 10px; height: 10px;
+}
+form.commentform input.author {
+    background-position: 3px -3px;
+}
+form.commentform input.email {
+    background-position: 3px -33px;
+}
+form.commentform input.website {
+    background-position: 3px -63px;
+}
+form.commentform textarea.content {
+    font: 10pt/normal Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New"; font-size-adjust: none; font-stretch: normal;
+}
+.nocomments {
+    background: url("images/icon_cross.gif") no-repeat left rgb(253, 249, 227); padding: 5px 5px 5px 30px; border: 2px solid rgb(247, 229, 144); border-image: none; color: rgb(159, 142, 59); font-size: 11px;
+}
+.nocommentsadd {
+    background: url("images/icon_cross.gif") no-repeat left rgb(253, 249, 227); padding: 5px 5px 5px 30px; border: 2px solid rgb(247, 229, 144); border-image: none; color: rgb(159, 142, 59); font-size: 11px;
+}
+.nocomments {
+    background: url("images/icon_cross.gif") no-repeat left rgb(253, 249, 227);
+}
+.nocommentsadd {
+    background-image: url("images/icon_add.gif");
+}
+img#peng {
+    margin-top: 2px; margin-right: 10px; float: left;
+}
+div#sidebar {
+    color: rgb(102, 102, 102); font-size: 12px;
+}
+div#sidebar ul {
+    list-style: none; margin: 0px; padding: 0px;
+}
+div#sidebar a:link {
+    color: rgb(0, 102, 204);
+}
+div#sidebar a:visited {
+    color: rgb(0, 102, 204);
+}
+div#sidebar a:hover {
+    color: rgb(255, 51, 0);
+}
+div#sidebar a img {
+    border: currentColor; border-image: none;
+}
+div#sidebar h2 {
+    text-align: center; color: rgb(51, 51, 51); font-size: 14px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 3px; border-bottom-style: solid;
+}
+div#sidebar div#sideRight {
+    width: 48%; float: right;
+}
+div#sidebar div#sideLeft {
+    width: 48%; float: left;
+}
+div#sidebar div#sideLeft h2 {
+    padding: 5px 0px; color: rgb(255, 255, 255); text-transform: uppercase; font-weight: normal; border-bottom-color: rgb(47, 53, 63); border-bottom-width: 2px; border-bottom-style: solid; background-color: rgb(71, 80, 95);
+}
+div#sidebar div#sideRight h2 {
+    padding: 5px 0px; color: rgb(255, 255, 255); text-transform: uppercase; font-weight: normal; border-bottom-color: rgb(47, 53, 63); border-bottom-width: 2px; border-bottom-style: solid; background-color: rgb(71, 80, 95);
+}
+div#sidebar div#about p {
+    line-height: 20px;
+}
+div#sidebar div#about h2 {
+    border-color: rgb(220, 214, 179); padding: 5px 0px;
+}
+div#sidebar div#about {
+    border: 1px solid rgb(238, 238, 238); border-image: none; background-color: rgb(248, 248, 238);
+}
+div#sidebar div#about img.photo {
+    margin: 10px; float: left;
+}
+div#sidebar div#about a {
+    text-decoration: underline;
+}
+div#sidebar div#about a:link {
+
+}
+div#sidebar div#about a:visited {
+
+}
+div#sidebar div#about a:hover {
+
+}
+div#sidebar div#about div {
+    padding: 5px;
+}
+div#sidebar div#sideLeft ul li {
+    padding: 3px 0px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div#sidebar div#sideRight ul li {
+    padding: 3px 0px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div#sidebar div ul.bullet li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_bullet.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.bullet li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div ul.folder li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_folder.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.folder li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div ul.track li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_track.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.track li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div ul.date li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_date.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.date li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div ul.chain li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_link.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.chain li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div#tweets ul li span {
+    background-position: 0px -170px; padding: 3px 0px 3px 20px; background-image: url("images/icon_voice.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.voice li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_voice.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.voice li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div ul.alert li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_alert.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.alert li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div ul li a.child {
+    padding: 3px 0px 3px 25px; color: rgb(102, 102, 102); display: block; background-image: url("images/icon_child.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul li a.child:hover {
+    background-position: 0px -170px; color: rgb(255, 51, 0);
+}
+div#sidebar div#sideMain h2 {
+    padding: 5px 0px;
+}
+div#sidebar div#sideMain div {
+    background-position: 0px 26px; background-image: url("images/recentBg.gif"); background-repeat: repeat-x;
+}
+div#sidebar div#sideMain div ul li {
+    padding: 2px 0px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div#sidebar div ul li a.mini_rss {
+    padding: 0px; width: 20px; height: 20px; text-indent: -9000em; text-decoration: none; margin-top: -2px; float: right; display: block; background-image: url("images/icon_rss.gif");
+}
+div#sidebar div ul li a.mini_rss:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div#side-book-recommendation img {
+    width: 100px;
+}
+/*#mySearchWrapper {*/
+    /*margin: 10px auto; border: 2px solid rgb(51, 51, 51); border-image: none; background-color: rgb(68, 68, 68);*/
+/*}*/
+#mySearch {
+    padding: 5px 0px; border: 1px solid rgb(86, 86, 86); border-image: none; text-align: center; background-color: rgb(68, 68, 68);
+}
+.lb_search {
+    background-position: 0px 0px; padding: 2px 0px 10px 25px; height: 14px; text-indent: -9000em; background-image: url("images/icon_search.gif"); background-repeat: no-repeat;
+}
+#mySearch input.keyword {
+    padding: 2px; width: 72%; font-size: 11px;
+}
+#mySearch img {
+    margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+#mySearch .submit {
+    margin: 0px 5px 0px 0px; padding: 0px; width: 70px; height: 21px; float: right; position: relative;
+}
+#newmsg {
+    right: 12px; color: red; padding-top: 5px; position: absolute;
+}
+.opt_comment {
+    margin-top: 5px; margin-left: -5px;
+}
+.thumbnail_td {
+    text-align: center;
+}
+.thumnail_img {
+    border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+.Cal {
+    width: 100%; height: 200px;
+}
+#pager {
+    margin: 25px 0px; text-align: center; font-size: 12px;
+}
+#pager a {
+    padding: 2px 5px; border: 1px solid rgb(154, 175, 229); border-image: none; color: rgb(46, 106, 177); text-decoration: none; margin-right: 0px;
+}
+#pager span.current {
+    padding: 2px 5px; border: 1px solid navy; border-image: none; color: rgb(255, 255, 255); font-weight: bold; margin-right: 0px; background-color: rgb(46, 106, 177);
+}
+.panel_inline {
+    display: inline;
+}
+div#sidebar div ul.side_ing_list li a {
+    padding: 3px 0px 3px 20px; background-image: url("images/icon_voice.gif"); background-repeat: no-repeat;
+}
+div#sidebar div ul.side_ing_list li a:hover {
+    background-position: 0px -170px;
+}
+div#sidebar div ul.side_ing_list span.ing_date {
+    color: gray; font-size: 12px;
+}
+div.post div.entry {
+    font-family: "Trebuchet MS", Georgia,"Times New Roman",Times,sans-serif;
+}
+.lb_search {
+    padding-top: 1px;
+}
+#mySearch input.keyword {
+    padding-top: 1px; padding-bottom: 1px;
+}
+div.post div.entry blockquote {
+    min-height: 30px;
+}
+div#my_ing_recent {
+    display: none;
+}
+div#about_body p {
+    margin: 0px auto 6px;
+}
+div#sidebar div#sideMain div ul li {
+    padding-top: 4px;
+}
+div.post div.entry img {
+    padding: 5px; border: 1px solid rgb(204, 204, 204); margin-bottom: 3px;
+}
+div.post div.entry img.floatLeft {
+    margin: 5px 10px 5px 0px;
+}
+div.post div.entry img.floatRight {
+    margin: 5px 0px 5px 10px;
+}
+div.post div.entry img.embed {
+    padding: 0px; border: 0px currentColor; border-image: none;
+}
+#content {
+    overflow: hidden;
+}
+#sidebar {
+    overflow: hidden;
+}
+div#sidebar div#sideMain div h2 {
+    margin: 7px 0px 0px;
+}
+div#sidebar div#sideRight div h2 {
+    margin: 7px 0px 5px;
+}
+div#sidebar div#sideLeft div h2 {
+    margin: 7px 0px 5px;
+}
+div.post div.entry h1 {
+    margin-top: 24px; margin-bottom: 12px;
+}
+div.post div.entry h2 {
+    margin-top: 24px; margin-bottom: 12px;
+}
+div.post div.entry h3 {
+    margin-top: 24px; margin-bottom: 12px;
+}
+div.post div.entry h1 {
+    padding: 5px; color: white; background-color: gray;
+}
+div.post h2 {
+    line-height: 120%; font-size: 22px;
+}
+div.post div.entry blockquote p {
+    line-height: 150%;
+}
+ol.commentlist li {
+    border-bottom-color: gray; border-bottom-width: 1px; border-bottom-style: solid;
+}
+div.post div.entry small {
+    text-align: left; font-size: 80%; display: inline;
+}
+#AjaxHolder_PostComment_panelAD {
+    display: none;
+}
+#relative_posts {
+    display: none;
+}
+#itnews {
+    display: none;
+}
+#google_ads_div_cnblogs_blogpost_bottom {
+    display: none;
+}
+#div_ad2 {
+    display: none;
+}
+#commentList fieldset.comment_quote {
+    border: 1px solid gray; border-image: none;
+}
+#comment_form fieldset.comment_quote {
+    border: 1px solid gray; border-image: none;
+}
+div.post div.entry pre.code {
+    border-style: dashed dashed dashed solid; margin: 10px 0px; line-height: 140%; font-size: 10pt; border-left-color: rgb(108, 226, 108); border-left-width: 5px;
+}
+div.post div.entry {
+    margin-bottom: 10px;
+}
+.jeffz_seo {
+    display: none;
+}
+div#license_information {
+    padding: 5px 10px 0px; border: 1px solid rgb(232, 231, 208); border-image: none; color: rgb(102, 102, 102); margin-top: -15px; margin-bottom: 10px; min-height: 10px; background-color: rgb(248, 248, 238);
+}
+div#license_information p {
+    margin: 5px auto; text-indent: 0px;
+}
+div#license_information p a {
+    border-bottom-color: currentColor; border-bottom-width: 1px; border-bottom-style: dashed;
+}
+div#license_information img {
+    margin: 5px 8px 0px 0px;
+}
